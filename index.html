@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="utf-8">
+    <title>DHEERAJ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <style>
+        *:before,
+        *:after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: #384047;
+        }
+        
+        form {
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background: #f4f7f8;
+            border-radius: 8px;
+        }
+        
+        h1 {
+            margin: 0 0 30px 0;
+            text-align: center;
+        }
+        
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="email"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        textarea,
+        select {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            font-size: 16px;
+            height: auto;
+            margin: 0;
+            outline: 0;
+            padding: 15px;
+            width: 100%;
+            background-color: #e8eeef;
+            color: #8a97a0;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+            margin-bottom: 30px;
+        }
+        
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 0 4px 8px 0;
+        }
+        
+        select {
+            padding: 6px;
+            height: 32px;
+            border-radius: 2px;
+        }
+        
+        button {
+            padding: 19px 39px 18px 39px;
+            color: #FFF;
+            background-color: #4bc970;
+            font-size: 18px;
+            text-align: center;
+            font-style: normal;
+            border-radius: 5px;
+            width: 100%;
+            border: 1px solid #3ac162;
+            border-width: 1px 1px 3px;
+            box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+            margin-bottom: 10px;
+        }
+        
+        fieldset {
+            margin-bottom: 30px;
+            border: none;
+        }
+        
+        legend {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        label.light {
+            font-weight: 300;
+            display: inline;
+        }
+        
+        .number {
+            background-color: #5fcf80;
+            color: #fff;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            font-size: 0.8em;
+            margin-right: 4px;
+            line-height: 30px;
+            text-align: center;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+            border-radius: 100%;
+        }
+        
+        @media screen and (min-width: 480px) {
+            form {
+                max-width: 480px;
+            }
+        }
+        
+        .carousel-inner>.item>img {
+            margin: 40px;
+            width: 640px;
+            height: 360px;
+            background-color: #5fcf80;
+        }
+        
+        .bg-img-1 {
+            background-image: url("https://media.weddingz.in/images/460798b94851886467a96d5b0eba272a/A-Z-guide-on-Punjabi-wedding-rituals-and-all-you-need-to-know-about-them-18.jpg");
+        }
+        
+        .bg-img-2 {
+            background-image: url("https://images.shaadisaga.com/shaadisaga_production/photos/pictures/002/723/545/new_medium/BeFunky-collage.jpg?1624300568");
+        }
+        
+        .bg-img-3 {
+            background-image: url("https://static.toiimg.com/thumb/msid-87185308,width-1280,resizemode-4/87185308.jpg");
+        }
+        
+        .bg-img-4 {
+            background-image: url("https://www.weddingsutra.com/images/wedding-images/entertaining/punjabi-wedding-tradition/punjabi-wedding-tradition-pic20.jpg");
+        }
+        
+        .bg-img-5 {
+            background-image: url("https://images.shaadisaga.com/shaadisaga_production/photos/pictures/000/830/072/original/BeFunky-collage_%2859%29.jpg?1556518878");
+        }
+        
+        .bg-img-6 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJlSYPHL3xStd_dbYhZRuABbhl9zk1cywfnje2II_EszrFFfGjniPlLjOc3a_W7JPuIQ&usqp=CAU");
+        }
+        
+        .bg-img-7 {
+            background-image: url("https://i.pinimg.com/originals/ed/99/09/ed99095c0bf6c2d86a206cfac96dd199.jpg");
+        }
+        
+        .bg-img-8 {
+            background-image: url("https://www.weddingsutra.com/images/wedding-images/entertaining/punjabi-wedding-tradition/punjabi-wedding-tradition-pic19.jpg");
+        }
+        
+        .bg-img-9 {
+            background-image: url("https://i0.wp.com/4.bp.blogspot.com/-PrbzTQxReE0/VV3722WFBoI/AAAAAAAAFUM/Vg7oTn2QsSo/s1600/6%2Bmuslim%2Bwedding%2B%257C%2BIndian%2Bmuslim%2Bwedding%2B%257C%2Bmuslim%2Bbride%2B%257C%2Bgreen%2Bbridal%2Blehenga%2B%257C%2Bthe%2Bwedding%2Bsalad%2B%257C%2Bwedding%2Bsalad%2Bblog%2B%257C%2BIndian%2Bwedding%2Bphotography%2B%257C%2BIndian%2Bbride%2B%257C%2BBest%2BIndian%2Bwedding%2Bphotographer%2Bin%2Bmumbai%2B%257C%2BWedding%2Bdecor%2B%257C%2Bbride%2Bentry%2B%257C.jpg?resize=1170%2C780");
+        }
+        
+        .bg-img-10 {
+            background-image: url("https://www.culturalindia.net/iliimages/Punjabi%20Wedding.jpg");
+        }
+        
+        .bg-img-11 {
+            background-image: url("https://lirp.cdn-website.com/bd6f6ba9/dms3rep/multi/opt/amish-thakkar-YtTnSzzAFCo-unsplash-640w.jpg");
+        }
+        
+        .bg-img-12 {
+            background-image: url("https://www.weddingsutra.com/images/wedding-images/entertaining/punjabi-wedding-tradition/punjabi-wedding-tradition-pic26.jpg");
+        }
+        
+        .bg-img-13 {
+            background-image: url("https://www.dulhaniyaa.com/assets/blogs/3a4d0ea1261d2157ae6258e2b0448278.jpg");
+        }
+        
+        .carousel-image {
+            color: white;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .carousel-item h2 {
+            position: absolute;
+            margin: 0;
+            left: 50%;
+            top: 10%;
+            transform: translate(-50%, -50%);
+            font-size: 6rem;
+        }
+        
+        .carousel-item p {
+            position: absolute;
+            margin: 0;
+            left: 50%;
+            top: 80%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+        }
+        
+        .main {
+            color: white;
+            text-align: center;
+            position: relative;
+            font-size: 6rem;
+            background-color: rgb(122, 230, 230);
+        }
+        
+        hr {
+            border: dotted #000808 6px;
+            border-bottom: none;
+            width: 4%;
+            margin: 100px auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">DHEERAJ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FORM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FESTIVAL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=" # ">ABOUT ME</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link disabled ">CONTECT ME</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- sing up page -->
+    <div class="row">
+        <div class="col-md-12">
+            <form action="index.html" method="post">
+                <h1> Sign Up </h1>
+
+                <fieldset>
+
+                    <legend><span class="number">1</span> Your Basic Info</legend>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="mail" name="user_email">
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="user_password">
+
+                    <label>Age:</label>
+                    <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
+                    <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">Over 13</label>
+
+                </fieldset>
+                <fieldset>
+
+                    <legend><span class="number">2</span> Your Profile</legend>
+
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" name="user_bio"></textarea>
+
+
+
+                    <label for="job">Job Role:</label>
+                    <select id="job" name="user_job">
+                    <optgroup label="Web">
+                      <option value="frontend_developer">Front-End Developer</option>
+                      <option value="php_developer">PHP Developer</option>
+                      <option value="python_developer">Python Developer</option>
+                      <option value="rails_developer">Rails Developer</option>
+                      <option value="web_designer">Web Designer</option>
+                      <option value="wordpress_developer">Wordpress Developer</option>
+                    </optgroup>
+                    <optgroup label="Mobile">
+                      <option value="android_developer">Android Developer</option>
+                      <option value="ios_developer">IOS Developer</option>
+                      <option value="mobile_designer">Mobile Designer</option>
+                    </optgroup>
+                    <optgroup label="Business">
+                      <option value="business_owner">Business Owner</option>
+                      <option value="freelancer">Freelancer</option>
+                    </optgroup>
+                  </select>
+
+                    <label>Interests:</label>
+                    <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label><br>
+                    <input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Design</label><br>
+                    <input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Business</label>
+
+                </fieldset>
+
+                <button type="submit">Sign Up</button>
+
+            </form>
+        </div>
+    </div>
+    <hr>
+    <!-- for punjabi wedding ceremonies -->
+
+    <h2 class="main">
+        Sikh Pre Wedding Ceremonies
+    </h2>
+
+
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 9"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 10"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 11"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 12"></button>
+
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item carousel-image bg-img-1 active" data-bs-interval="100">
+
+                <!-- <img src="https://www.weddingsutra.com/images/panjabi-wedding-intro.jpg" class="d-block w-100" alt="hi"> -->
+                <h2>Roka</h2>
+                <p>Similar to the Roka ceremony in Hindu Wedding, this event is said to be the first step of the wedding. It is during this celebration, the two families meet at the bride’s home. Gifts are exchanged between the two families and sweets are
+                    distributed.
+                </p>
+
+            </div>
+            <div class="carousel-item carousel-image bg-img-2" data-bs-interval="100">
+
+                <h2>Taka</h2>
+                <p>This is a significant Sikh pre wedding ceremony as during this event, the date for the wedding is fixed by the family members from the two sides. The word Taka means to ‘set the date,’ this ceremony takes place in the house of the bride.
+                </p>
+                <!-- <img src="wed1.webp" class="d-block w-100" alt="hi"> -->
+            </div>
+
+            <div class="carousel-item carousel-image bg-img-3" data-bs-interval="100">
+
+                <!-- <img src="https://www.findbanquet.com/blog/wp-content/uploads/2021/03/chunni-chadhai.jpg" class="d-block w-100" alt="hi"> -->
+                <h2>Kurmai</h2>
+                <p>It is an official engagement ceremony which takes place either at groom’s house or in the Gurudwara. The rings are exchanged and also the family of the bride offers kara (Sikh bangle) to the groom. The ceremony begins with a short prayer
+                    by granthi (Sikh Priest), followed by placing a red scarf around the groom’s shoulder. Dried dates are then fed to the groom by the grandfather after which food and drinks are enjoyed by all.</p>
+
+
+            </div>
+            <div class="carousel-item carousel-image bg-img-4" data-bs-interval="100">
+
+                <!-- <img src="https://www.weddingsutra.com/images/wedding-images/real_wed/featured/guranajan-raj/guranajan-raj-05.jpg" class="d-block w-100" alt="hi"> -->
+                <h2>Chunni Ceremony</h2>
+                <p> This auspicious ceremony is performed by mother of the groom who covers the head of the bride with a red scarf or chunni which signifies that from now on the bride-to-be is responsible for upholding the honour and pride of the groom’s
+                    family. The bride is also wears the clothes and jewelery brought by her in-laws and the groom marks her head with sindoor or vermilion as a sign of commitment. Sweets as shagun are also offered by groom’s parents to the family of the
+                    bride as blessings and acceptance of engagement. Gifts are also exchanged between the two family followed by a grand celebration with a lot of music and dance.</p>
+
+
+            </div>
+            <div class="carousel-item carousel-image bg-img-5" data-bs-interval="100">
+                <!-- <img src="https://www.brides.com/thmb/ak0bPok5hsGCmA52PCJK0Ro1Erw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/73-AMR_3533-7a095cf6bd1b40afb5ad02c038b84ca4.jpg" class="d-block w-100" alt="hi"> -->
+                <h2>Maiya (cleansing and purifying)</h2>
+                <p> A five-day event, Maiya takes place in families of both bride and the groom. During this event, oil is poured into the hair of the bride and groom with olive branches, and their bodies are massaged with turmeric powder. Girls performing
+                    Maiya have red string or a thread tied around their wrist; and a red scarf is held above the bride or groom’s head, which girls from the family take turns to hold while the traditional songs are sung.
+                </p>
+                </span>
+
+            </div>
+            <div class="carousel-item carousel-image bg-img-6" data-bs-interval="100">
+                <!-- <img src="https://cdn0.weddingwire.in/article/5912/3_2/1280/jpg/82195-punjabi-wedding-amrit-arora-photography-wedding.jpeg" class="d-block w-100" alt="hi"> -->
+                <h2>Gana</h2>
+                <p>The ceremony marks the tying of a red thread on the left wrist of the bride and the right wrist of the groom. Along with this, several auspicious items like cowrie shells, iron key chain, pearls and a small pouch of sugar are also tied
+                    to the wrist for good fortune.</p>
+                </span>
+
+            </div>
+            <div class="carousel-item carousel-image bg-img-7" data-bs-interval="100">
+                <!-- <img src="https://media.weddingz.in/images/7b87136188a78fa3e8b28fb53708d533/a-z-guide-on-punjabi-wedding-rituals-and-all-you-need-to-know-about-them.jpg" class="d-block w-100" alt="hi"> -->
+                <h2>Vatna</h2>
+                <p>Vatna ceremony takes place a day prior to the wedding day. In this ceremony a paste consisting of barley flour, turmeric and mustard oil is applied to the bodies of the groom and the bride for cleansing and beautifying them that is then
+                    followed by a ritual bath.</p>
+                </span>
+
+            </div>
+            <div class="carousel-item carousel-image bg-img-8" data-bs-interval="100">
+
+                <!-- <img src="https://www.todaystraveller.net/wp-content/uploads/2023/01/Punjabi_Wedding_Couple-1024x682.jpg" class="d-block w-100" alt="hi"> -->
+                <h2>Gharoli</h2>
+                <p> This ceremony is related to the ritual bath which the groom has to take after Vatna. In this auspicious ceremony, the groom's sister-in-law accompanied by other female relatives go to a nearby Gurudwara or well to fill an earthen pot (gharoli)
+                    with water that is used for bathing the groom after the vatna ceremony.</p>
+                </span>
+
+            </div>
+            <div class="carousel-item carousel-image bg-img-9" data-bs-interval="100">
+                <!-- <img src="https://cdn0.weddingwire.in/article/3512/original/1280/jpg/82153-punjabi-wedding-sunny-dhiman-photography-kurmai.jpeg" class="d-block w-100" alt="hi"> -->
+                <h2>Karahi Charna </h2>
+                <p>It is also a five-day ceremony which takes place in the house of groom and the bride. Savory and sweet items are made in karahi and are offered to guests as a gesture of blessing to bride and groom.</p>
+                </span>
+
+
+            </div>
+            <div class="carousel-item carousel-image bg-img-10" data-bs-interval="100">
+
+                <!-- <img src="https://media.weddingz.in/images/8ab88e31824157e4abc19aad6e4c2bd2/sikh-wedding-rituals-and-customs-laavan-pheras.jpg" class="d-block w-100" alt="hi"> -->
+                <h2>NanKi Shak</h2>
+                <p> NanKi Shak is a ceremony where the gifts are exchanged at the houses of bride and the groom. Sometimes a priest also performs small pooja prior to the exchange of presents. A formal get together is also planned for this ceremony.
+                </p>
+                </span>
+
+            </div>
+            <div class="carousel-item carousel-image bg-img-11" data-bs-interval="100">
+
+                <!-- <img src="https://planningasikhwedding.com/wp-content/uploads/2020/11/anand-karaj.jpg?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-2" class="d-block w-100" alt="hi"> -->
+                <h2>Mehendi </h2>
+                <p>A fun filled ceremony, Mehendi takes place about one or two days before the wedding. Bride and groom, both get the design made on their hand and feet with henna mixed with eucalyptus oil, clove oil and lemon juice water. This is also seen
+                    as an opportunity to play dholak and performing folk dance and songs by the ladies. Women family members also apply mehendi on their hands as it is considered a shagun.</p>
+                </span>
+
+            </div>
+            <div class="carousel-item carousel-image bg-img-12" data-bs-interval="100">
+
+                <!-- <img src="https://www.dulhaniyaa.com/assets/blogs/3a4d0ea1261d2157ae6258e2b0448278.jpg" class="d-block w-100" alt="hi"> -->
+                <h2>Choora Ceremony (bangle ceremony)</h2>
+                <p> In this unique ceremony, the uncle of the bride gifts her choora which is a set of 21 bangles of red and cream colour. This choora is then bathed in yogurt milk and rosewater. The bride is then asked to close her eyes and her uncle slips
+                    the choora on her hands while the traditional folk songs are enjoyed by all the guests. After putting the choora, bride’s uncle covers it with shawl (subar) which symbolizes the departing of the bride from her family and home.
+                </p>
+
+            </div>
+            <div class="carousel-item carousel-image bg-img-13" data-bs-interval="100">
+
+                <!-- <img src="https://cdn0.weddingwire.in/article/5912/3_2/960/jpg/82195-punjabi-wedding-amrit-arora-photography-wedding.jpeg" class="d-block w-100" alt="hi"> -->
+                <h2>Doli</h2>
+                <p> To perform this Sikh post wedding ceremony, the bride wears the set of clothes and jewelry presented to her by her in-laws. She then feeds the male members of her own family with cooked rice and prepares to leave with her new family. While
+                    leaving the house, she has to throw handful of puffed rice, which symbolizes blessings and prosperity for her own family. On arriving at the groom’s house, the groom's mother welcomes the couple by pouring some oil on the doorstep.
+                    The mother then attempts to drink water from a lota or a jar but the groom prevents her. After three failed attempts, the groom relents and lets the mother drink the water. This act is repeated with six other female relatives.
+                </p>
+
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+    </div>
+
+
+    <section id="aboutme "></section>
+
+
+
+
+</body>
+
+</html>
